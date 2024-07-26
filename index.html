@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixify TV</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+        .header {
+            background-color: #FFA500;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo img {
+            width: 80px;
+            height: auto;
+        }
+        .header .profile-icon img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+        .main-banner {
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 7px;
+            width: 90%;
+        }
+        .main-banner img {
+            width: 100%;
+            height: 20%;
+            border-radius: 7px;
+        }
+        .main-banner:hover {
+            transform: scale(1.002);
+            box-shadow: 0 0 40px #FFA500;
+        }
+        .main-banner .title-bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 0 0 7px 7px;
+        }
+        .content {
+            padding: 10px;
+        }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .item {
+            width: calc(25% - 5px);
+            height: 180px;
+            background-color: #333;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 7px;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+        .item:hover {
+            transform: scale(1.002);
+            box-shadow: 0 0 20px #FFA500;
+        }
+        .item .title-bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 3px 0;
+            border-radius: 0 0 7px 7px;
+        }
+        .item .rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 165, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            display: block; /* Ensure the rating is always visible */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://i.ibb.co/HdH1bjg/Untitled-design-7.png" alt="Logo">
+        </div>
+        <div class="profile-icon">
+            <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-512x512-zxne30hp.png" alt="Profile">
+        </div>
+
+    </div>
+    <div class="main-banner" onclick="playMovie('https://drive.google.com/file/d/1SN5RE9ydgSxMs08IqtlLO95INGoRCcAE/preview')">
+        <img src="https://galeries.be/wp-content/uploads/2024/05/INSIDE_OUT_2_ONLINE_USE_i250_136cQ_pub-1568x656.jpg" alt="Main Banner">
+        <div class="title-bar">Inside Out 2</div>
+</div>
+
+    </div>
+    <div class="content">
+        <div class="movies">
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1rY-7y04-XJZZ3dw8LJ7UxfntM3OTi6qe/preview')">
+                <img src="https://monkeyarmreviews.com/wp-content/uploads/2015/06/webbanner_insideout1-940x300.jpg" alt="Movie 1">
+                <div class="title-bar">Inside Out</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1SN5RE9ydgSxMs08IqtlLO95INGoRCcAE/preview')">
+                <img src="https://www.creativecornerchildcarecenter.com/wp-content/uploads/2024/06/Inside-Out-2-Movie-Banner101.jpg" alt="Movie 2">
+                <div class="title-bar">Inside Out 2</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/14_s96ZSrnA-14ORKnLGFAvRX3zZsQhMU/preview')">
+                <img src="https://deadline.com/wp-content/uploads/2024/06/Twisters-4.jpg?w=681&h=383&crop=1" alt="Movie 3">
+                <div class="title-bar">Twisters</div>
+                <div class="rating">TV 16</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1OsyF2LKJqjtv0b2Xd9GWOLcYkzny3VZo/preview')">
+                <img src="https://www.vitalthrills.com/wp-content/uploads/2023/02/mario-bros-movie.jpg" alt="Movie 4">
+                <div class="title-bar">Super Mario Bros.</div>
+                <div class="rating">TV 13</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1cEc5tZwczJz__iQSDDPHFbkyqpoMOBAc/preview')">
+                <img src="https://www.rotoscopers.com/wp-content/uploads/2016/10/4e2e43c902806399f3b67fb9d161b798be87f423.jpg" alt="Movie 4">
+                <div class="title-bar">Moana</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1HaXeNylNfZXhRudGTNLUWtrN-oAmone4/preview')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Sonic_the_Hedgehog_film_poster.jpg" alt="Movie 4">
+                <div class="title-bar">Sonic 1</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/13YPdlfR1BTzXfqwmfbzfiuPycjQsh0Yb/preview')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Sonic_the_Hedgehog_2_film_poster.jpg" alt="Movie 4">
+                <div class="title-bar">Sonic 2</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1Z_llFEaqJny8BXoIxgsItNBtjo60JdWu/preview')">
+                <img src="https://image.tmdb.org/t/p/original/lxD5ak7BOoinRNehOCA85CQ8ubr.jpg" alt="Movie 4">
+                <div class="title-bar">Toy Story</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1k3RVDc_Vah1H9lFsXQZJ6mE3KqdDcK_T/preview')">
+                <img src="https://i.ebayimg.com/images/g/AawAAOxy06RRHqyO/s-l1200.jpg" alt="Movie 4">
+                <div class="title-bar">Toy Story 2</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/13msxxmyEco7CRBkO_Ju1SMx5KK4r4Su8/preview')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGojEoXV0Hpdcu1AOzoLOs1gugUnqYSXXMlg&s" alt="Movie 4">
+                <div class="title-bar">Toy Story 3</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1bFUbsQ9VEazeCt5l_VBVDtjCsbJmZ_Vr/preview')">
+                <img src="https://i.ebayimg.com/images/g/9CUAAOSwd4tUGTWn/s-l1200.webp" alt="Movie 4">
+                <div class="title-bar">Toy Story 4</div>
+                <div class="rating">PG</div>
+            </div>
+
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1ZiPMKkIpNxqP1-3_aYf_m2fofWg2kDOC/preview')">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*C4kAmcDINHBGN0AxBU2fNQ.jpeg" alt="Movie 4">
+                <div class="title-bar">Imaginary</div>
+                <div class="rating">PG 14</div>
+            </div>
+
+            <!-- Add more movie items as needed -->
+        </div>
+    </div>
+
+    <script>
+        function playMovie(url) {
+            window.location.assign(url);
+            document.documentElement.requestFullscreen();
+        }
+    </script>
+</body>
+</html>
